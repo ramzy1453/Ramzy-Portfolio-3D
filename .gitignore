@@ -27,3 +27,5 @@ dist-ssr
 
 # vscode
 .vscode
+# Local Netlify folder
+.netlify
