@@ -40,14 +40,14 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>Who am I ?</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-4xl leading-[30px]"
       >
-        Ambitious computer science student with a passion for problem-solving
+        An ambitious computer science student with a passion for problem-solving
         and a self-taught web developer. I'm currently exploring Web
         technologies and get deeper into Artificial Intelligence. Seeking a role
         in which I can use my skills and passion to make a positive impact.

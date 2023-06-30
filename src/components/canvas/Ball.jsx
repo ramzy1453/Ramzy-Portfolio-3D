@@ -9,6 +9,7 @@ import {
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import { isMobile } from "react-device-detect";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -38,20 +39,28 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  return (
-    <Canvas
-      frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+  if (!isMobile)
+    return (
+      <Canvas
+        frameloop="demand"
+        dpr={[1, 2]}
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+          <Ball imgUrl={icon} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
-  );
+        <Preload all />
+      </Canvas>
+    );
+  if (isMobile) {
+    return (
+      <div className="flex items-center justify-center w-20 h-20 p-3 bg-white rounded-full">
+        <img src={icon} alt="icon" className="mx-auto" />
+      </div>
+    );
+  }
 };
 
 export default BallCanvas;

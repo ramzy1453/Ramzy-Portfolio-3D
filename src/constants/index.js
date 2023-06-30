@@ -329,6 +329,20 @@ const projects = {
     },
     {
       image:
+        "https://media.licdn.com/dms/image/D4E22AQFFC_99rt0eJA/feedshare-shrink_800/0/1688053105426?e=1691020800&v=beta&t=3lNItPverO2UPK8bBj1bDklm4UUoIeWm-MK_Zz5TYdw",
+      name: "Pong.js",
+      source_code_link: "https://github.com/ramzy1453/PONG.js",
+      demo_link: "https://classicpongjs.netlify.app",
+      description: "classic Pong game implemented using JavaScript",
+      tags: [
+        {
+          name: "javascript",
+          color: "orange-text-gradient",
+        },
+      ],
+    },
+    {
+      image:
         "https://media.discordapp.net/attachments/804151950227537980/1119006796925915286/image.png?width=899&height=408",
       name: "Covid-19 Tracker",
       demo_link:
